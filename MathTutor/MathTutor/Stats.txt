@@ -1,0 +1,13 @@
+============================
+     Session Statistics     
+============================
+User: John Cena
+----------------------------
+Questions attempted:      0
+Correct answers:          0
+Incorrect answers:        0
+----------------------------
+Questions retried:        0
+Correct retries:          0
+Incorrect retries:        0
+============================
