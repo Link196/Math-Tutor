@@ -1,7 +1,7 @@
 ============================
      Session Statistics     
 ============================
-User: John Cena
+User: Andrew Hutson
 ----------------------------
 Questions attempted:      0
 Correct answers:          0

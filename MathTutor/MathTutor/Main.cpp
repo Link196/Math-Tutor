@@ -1,8 +1,8 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.5.2
-// Date last modified: 01/09/2017
+// Version: 2.5.3
+// Date last modified: 03/09/2017
 // Copyright © 2017 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
@@ -14,15 +14,18 @@
 #include "Functions.h"
 #include "User.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::ofstream;
 
 int main()
 {
 	srand(time(NULL)); // random number generator for math problems
 
 	cout << "Math Tutor" << endl; // the program's name
-	cout << "Version 2.5.2" << endl; // the program's version number
-	cout << "Date last modified: 01/09/2017" << endl; // the date the program was last modified
+	cout << "Version 2.5.3" << endl; // the program's version number
+	cout << "Date last modified: 03/09/2017" << endl; // the date the program was last modified
 	cout << "Copyright (c) 2017 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl; // the program's description

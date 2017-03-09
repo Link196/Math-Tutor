@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Functions.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 void changelog() // display's the changes made over the course of the program's development
 {
@@ -12,12 +14,16 @@ void changelog() // display's the changes made over the course of the program's 
 	cout << "---------------------------" << endl;
 	cout << "Changes in current version:" << endl;
 	cout << "---------------------------" << endl;
-	cout << " Version 2.5.2" << endl;
-	cout << "	- Removed one of the secret Easter Eggs because it was stupid" << endl;
+	cout << " Version 2.5.3" << endl;
+	cout << "	- Retargeted the project to Visual Studio 2017 (Platform Toolset v141)" << endl;
+	cout << "	- Minor code refactoring to increase efficiency throughout the program" << endl;
 	cout << endl;
 	cout << "-----------------------------" << endl;
 	cout << "Changes in previous versions:" << endl;
 	cout << "-----------------------------" << endl;
+	cout << " Version 2.5.2" << endl;
+	cout << "	- Removed one of the secret Easter Eggs because it was stupid" << endl;
+	cout << endl;
 	cout << " Version 2.5.1" << endl;
 	cout << "	- Added secret Easter Eggs" << endl;
 	cout << endl;

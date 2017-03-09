@@ -1,6 +1,6 @@
 #include "User.h"
 
-User::User(const string username)
+User::User(const string username) // creates user object and initializes all counting variables to '0'
 {
 	name = username; // name = whatever is passed to the function
 	correctAnswers = 0; // correct answers = 0

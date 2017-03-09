@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Functions.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 void multiplication(User* p1) // multiplication subject area
 {

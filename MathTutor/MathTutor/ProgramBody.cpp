@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Functions.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 bool programBody(User* p1) // the main body of the program
 {
