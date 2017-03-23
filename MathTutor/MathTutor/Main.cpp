@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.5.3
-// Date last modified: 03/09/2017
-// Copyright © 2017 Andrew Hutson. All rights reserved.
+// Version: 2.6.0
+// Date last modified: 03/22/2017
+// Copyright (c) 2017 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
 // For program changelog, see changelog() in Changelog.cpp
@@ -18,14 +18,15 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::ofstream;
+using std::ios;
 
 int main()
 {
 	srand(time(NULL)); // random number generator for math problems
 
 	cout << "Math Tutor" << endl; // the program's name
-	cout << "Version 2.5.3" << endl; // the program's version number
-	cout << "Date last modified: 03/09/2017" << endl; // the date the program was last modified
+	cout << "Version 2.6.0" << endl; // the program's version number
+	cout << "Date last modified: 03/22/2017" << endl; // the date the program was last modified
 	cout << "Copyright (c) 2017 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl; // the program's description
@@ -46,9 +47,9 @@ int main()
 		done = programBody(p1); // the main body of the program
 	}
 
-	// output stats to the screen and a text file
+	// output stats to the screen and a csv file
 	ofstream stats; // open file output stream
-	stats.open("Stats.txt"); // open text file for writing
+	stats.open("Stats.csv", ios::out | ios::ate | ios::app | ios::binary); // open csv file for writing
 
 	if (stats.fail())
 	{
@@ -70,25 +71,13 @@ int main()
 	cout << "Incorrect retries:        " << p1->incorrectRetries << endl; // output the number of incorrect retries
 	cout << "============================" << endl << endl;
 
-	// write stats to a file
-	stats << "============================" << endl;
-	stats << "     Session Statistics     " << endl;
-	stats << "============================" << endl;
-	stats << "User: " << p1->getName() << endl; // output the user's name
-	stats << "----------------------------" << endl;
-	stats << "Questions attempted:      " << p1->totalAttempted << endl; // output the total number of questions attempted
-	stats << "Correct answers:          " << p1->correctAnswers << endl; // output the number of correct answers
-	stats << "Incorrect answers:        " << p1->incorrectAnswers << endl; // output the number of incorrect answers
-	stats << "----------------------------" << endl;
-	stats << "Questions retried:        " << p1->totalRetried << endl; // output the total number of questions retried
-	stats << "Correct retries:          " << p1->correctRetries << endl; // output the number of correct retries
-	stats << "Incorrect retries:        " << p1->incorrectRetries << endl; // output the number of incorrect retries
-	stats << "============================";
+	// write stats to a new line of the csv file
+	stats << p1->getName() << "," << p1->totalAttempted << "," << p1->correctAnswers << "," << p1->incorrectAnswers << "," << p1->totalRetried << "," << p1->correctRetries << "," << p1->incorrectRetries << endl;
 
-	cout << "Stats have also been saved to Stats.txt in the program's source code folder." << endl;
+	cout << "Stats have also been saved to the last line of Stats.csv in the program's source code folder." << endl;
 	cout << endl;
 
-	stats.close(); // close the text file
+	stats.close(); // close the file
 
 	delete p1; // deletes the pointer
 
