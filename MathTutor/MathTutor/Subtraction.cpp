@@ -7,8 +7,13 @@ using std::endl;
 
 void subtraction(User* p1) // subtraction subject area
 {
-	cout << "You will be presented with 10 subtraction problems and then retured to the main menu." << endl;
-	cout << "If, at any time, you wish to manually be returned to the main menu, enter '-1' as your response." << endl;
+	cout << "You will now be presented with 10 subtraction problems." << endl;
+	cout << "If, at any time, you wish to skip the rest of the section, enter '-1' as your response." << endl;
+	cout << endl;
+
+	cout << "==================================" << endl;
+	cout << "Subtraction problems: " << endl;
+	cout << "==================================" << endl;
 	cout << endl;
 
 	int difficulty;
@@ -124,7 +129,7 @@ void subtraction(User* p1) // subtraction subject area
 
 		else
 		{
-			count = 11; // exit the for loop to return to the main menu
+			count = 11; // exit the loop to return to the main menu or advance to the next subject area
 		}
 	}
 }

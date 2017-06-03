@@ -143,14 +143,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Addition.cpp" />
-    <ClCompile Include="AdditionSubtraction.cpp" />
-    <ClCompile Include="AllSubjects.cpp" />
     <ClCompile Include="Changelog.cpp" />
     <ClCompile Include="Division.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Multiplication.cpp" />
-    <ClCompile Include="MultiplicationDivision.cpp" />
     <ClCompile Include="ProgramBody.cpp" />
     <ClCompile Include="Subtraction.cpp" />
     <ClCompile Include="User.cpp" />

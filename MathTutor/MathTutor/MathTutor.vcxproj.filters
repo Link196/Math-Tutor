@@ -42,15 +42,6 @@
     <ClCompile Include="Changelog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AdditionSubtraction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MultiplicationDivision.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AllSubjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Functions.h">

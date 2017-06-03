@@ -40,23 +40,28 @@ bool programBody(User* p1) // the main body of the program
 
 		break;
 
-		case 5:
+		case 5: // starts the addition subject area and then starts the subtraction subject area
 		{
-			additionSubtraction(p1); // starts the combined addition and subtraction subject area
+			addition(p1);
+			subtraction(p1);
+		}
+
+		break; 
+
+		case 6: // starts the multiplication subject area and then starts the division subject area
+		{
+			multiplication(p1);
+			division(p1);
 		}
 
 		break;
 
-		case 6:
+		case 7: // starts all four subject areas sequentially
 		{
-			multiplicationDivision(p1); // starts the combined multiplication and division subject area
-		}
-
-		break;
-
-		case 7:
-		{
-			allSubjects(p1); // starts the all subjects subject area
+			addition(p1);
+			subtraction(p1);
+			multiplication(p1);
+			division(p1);
 		}
 
 		break;
