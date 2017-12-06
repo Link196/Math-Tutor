@@ -25,7 +25,7 @@ int menu() //displays the program's menu and takes the user's subject selection
 	cout << "-------------------------------" << endl;
 	cout << "Program Options:" << endl;
 	cout << "-------------------------------" << endl;
-	cout << "8) View changelog" << endl;
+	cout << "8) View Release Notes" << endl;
 	cout << "9) Exit the program" << endl;
 	cout << "-------------------------------" << endl;
 	cout << "Enter a number between 1 and 9: " << endl;
