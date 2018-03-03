@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Functions.h"
 
 using std::cout;
 using std::cin;
@@ -14,15 +13,20 @@ void changelog() // displays the changes made over the course of the program's d
 	cout << "---------------------------" << endl;
 	cout << "Changes in current version:" << endl;
 	cout << "---------------------------" << endl;
+	cout << " Version 2.8.0" << endl;
+	cout << "	- Changed: Moved the contents of Functions.h to Main.cpp to increase program efficiency" << endl;
+	cout << "	- Changed: Moved ProgramBody() to Main.cpp so that it still worked" << endl;
+	cout << "	- Changed: Minor code refactoring to increase efficiency throughout the program" << endl;
+	cout << endl;
+	cout << "-----------------------------" << endl;
+	cout << "Changes in previous versions:" << endl;
+	cout << "-----------------------------" << endl;
 	cout << " Version 2.7.1" << endl;
 	cout << "	- Bugfix: Retargeted the project to the latest version of the Windows 10 SDK (16299)" << endl;
 	cout << "	- Changed: Changelog is now 'Release Notes'" << endl;
 	cout << "	- Changed: Added descriptions of the types of changes in Release Notes" << endl;
 	cout << "	- Changed: New wording throughout the Release Notes" << endl;
 	cout << endl;
-	cout << "-----------------------------" << endl;
-	cout << "Changes in previous versions:" << endl;
-	cout << "-----------------------------" << endl;
 	cout << " Version 2.7.0" << endl;
 	cout << "	- Removed: Eliminated multi-subject functions" << endl;
 	cout << "	- Changed: Multi-subject runs now call the individual subject functions in sequence" << endl;

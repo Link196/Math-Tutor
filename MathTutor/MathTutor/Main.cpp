@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.7.1
-// Date last modified: 12/05/2017
-// Copyright (c) 2017 Andrew Hutson. All rights reserved.
+// Version: 2.8.0
+// Date last modified: 03/02/2018
+// Copyright (c) 2018 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
 // For program changelog, see changelog() in Changelog.cpp
@@ -11,7 +11,6 @@
 #include <iostream>
 #include <fstream>
 #include <ctime>
-#include "Functions.h"
 #include "User.h"
 
 using std::cout;
@@ -20,14 +19,111 @@ using std::endl;
 using std::ofstream;
 using std::ios;
 
+int menu(); // program menu
+void changelog(); // program changelog
+void addition(User*); // addition subject area
+void subtraction(User*); // subtraction subject area
+void multiplication(User*); // multiplication subject area
+void division(User*); // division subject area
+
+bool programBody(User* p1) // the main body of the program
+{
+	bool done = false;
+	int choice = menu(); // prompt the user for their subject choice by running the menu function
+
+	switch (choice) // subject selection menu
+	{
+	case 1: // starts the addition subject area
+	{
+		addition(p1);
+	}
+
+	break;
+
+	case 2: // starts the subtraction subject area
+	{
+		subtraction(p1);
+	}
+
+	break;
+
+	case 3: // starts the multiplication subject area
+	{
+		multiplication(p1);
+	}
+
+	break;
+
+	case 4: // starts the division subject area
+	{
+		division(p1);
+	}
+
+	break;
+
+	case 5: // starts the addition subject area and then starts the subtraction subject area
+	{
+		addition(p1);
+		subtraction(p1);
+	}
+
+	break;
+
+	case 6: // starts the multiplication subject area and then starts the division subject area
+	{
+		multiplication(p1);
+		division(p1);
+	}
+
+	break;
+
+	case 7: // starts all four subject areas sequentially
+	{
+		addition(p1);
+		subtraction(p1);
+		multiplication(p1);
+		division(p1);
+	}
+
+	break;
+
+	case 8: // displays the changelog
+	{
+		changelog();
+	}
+
+	break;
+
+	case 9: // exits the program
+	{
+		cout << "Math Tutor will now exit." << endl << "Thank you for using Math Tutor." << endl << "Have a nice day." << endl;
+		cout << endl;
+		done = true;
+
+		break;
+	}
+
+	default: // executes if the user entered an invalid choice
+	{
+		cout << "-----------------------------" << endl;
+		cout << "Error. " << choice << " is invalid" << endl;
+		cout << "Please enter a valid choice" << endl; // prompts the user for a valid choice
+		cout << "-----------------------------" << endl;
+		cout << endl;
+	}
+	}
+
+	return done;
+}
+
 int main()
 {
 	srand(time(NULL)); // random number generator for math problems
 
 	cout << "Math Tutor" << endl; // the program's name
-	cout << "Version 2.7.1" << endl; // the program's version number
-	cout << "Date last modified: 12/05/2017" << endl; // the date the program was last modified
-	cout << "Copyright (c) 2017 Andrew Hutson. All rights reserved." << endl;
+	cout << "Version 2.8.0" << endl; // the program's version number
+	cout << "Date last modified: 03/02/2018" << endl; // the date the program was last modified
+	cout << "Copyright (c) 2018 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl; // the program's description
 	cout << "Addition, Subtraction, Multiplication, and Division." << endl << endl; // subject areas that the program supports

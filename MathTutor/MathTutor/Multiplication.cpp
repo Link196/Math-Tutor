@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Functions.h"
+#include "User.h"
 
 using std::cout;
 using std::cin;

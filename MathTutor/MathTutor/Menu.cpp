@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Functions.h"
 
 using std::cout;
 using std::cin;
