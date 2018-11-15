@@ -1,8 +1,8 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.8.0
-// Date last modified: 03/02/2018
+// Version: 2.8.1
+// Date last modified: 11/14/2018
 // Copyright (c) 2018 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
@@ -120,9 +120,10 @@ int main()
 {
 	srand(time(NULL)); // random number generator for math problems
 
-	cout << "Math Tutor" << endl; // the program's name
-	cout << "Version 2.8.0" << endl; // the program's version number
-	cout << "Date last modified: 03/02/2018" << endl; // the date the program was last modified
+	// Welcome the user and output basic information about the program
+	cout << "Math Tutor" << endl;
+	cout << "Version 2.8.1" << endl;
+	cout << "Date last modified: 11/14/2018" << endl;
 	cout << "Copyright (c) 2018 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl; // the program's description
@@ -174,6 +175,8 @@ int main()
 	cout << endl;
 
 	stats.close(); // close the file
+
+	system("PAUSE"); // pause the program before exiting
 
 	delete p1; // deletes the pointer
 
