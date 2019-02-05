@@ -4,7 +4,20 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int menu() //displays the program's menu and takes the user's subject selection
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			menu
+
+Description:	Menu function displays the program's menu and 
+				takes in the user's subject selection
+
+Takes in:		Nothing
+
+Returns:		The user's action selection as an integer
+-----------------------------------------------------------------*/
+
+int menu()
 {
 	int choice;
 	// If the user enters an invalid integer, the switch will execute the default case, and the program will output the menu again and ask for a new choice.

@@ -5,7 +5,21 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void subtraction(User* p1) // subtraction subject area
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			subtraction
+
+Description:	Subtraction subject area prompts the user for a
+				difficulty level and then outputs ten (10)
+				subtraction problems of the selected difficulty
+
+Takes in:		Pointer to a global User object for stats tracking
+
+Returns:		Nothing
+-----------------------------------------------------------------*/
+
+void subtraction(User* p1)
 {
 	cout << "You will now be presented with 10 subtraction problems." << endl;
 	cout << "If, at any time, you wish to skip the rest of the section, enter '-1' as your response." << endl;

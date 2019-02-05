@@ -5,7 +5,21 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void division(User* p1) // division subject area
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			division
+
+Description:	Division subject area prompts the user for a
+				difficulty level and then outputs ten (10)
+				division problems of the selected difficulty
+
+Takes in:		Pointer to a global User object for stats tracking
+
+Returns:		Nothing
+-----------------------------------------------------------------*/
+
+void division(User* p1)
 {
 	cout << "You will now be presented with 10 division problems." << endl;
 	cout << "If, at any time, you wish to skip the rest of the section, enter -1 as your response." << endl;

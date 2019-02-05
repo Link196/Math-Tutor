@@ -4,7 +4,20 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void changelog() // displays the changes made over the course of the program's development
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			changelog
+
+Description:	Displays the changes made over the course of the 
+				program's development
+
+Takes in:		Nothing
+
+Returns:		Nothing
+-----------------------------------------------------------------*/
+
+void changelog()
 {
 	cout << "================================================================================================================" << endl;
 	cout << "Release Notes:" << endl;
@@ -13,21 +26,23 @@ void changelog() // displays the changes made over the course of the program's d
 	cout << "---------------------------" << endl;
 	cout << "Changes in current version:" << endl;
 	cout << "---------------------------" << endl;
-	cout << " Version 2.8.1" << endl;
-	cout << "	- Bugfix: Retargeted the project to Windows 10 SDK 17134" << endl;
-	cout << "	- Changed: Added functionality to pause the program before it exits so the user can see their stats" << endl;
+	cout << " Version 2.8.2" << endl;
+	cout << "	- Changed: Changed welcome message to increase clarity" << endl;
 	cout << "	- Changed: Minor code refactoring to increase efficiency throughout the program" << endl;
 	cout << endl;
 	cout << "-----------------------------" << endl;
 	cout << "Changes in previous versions:" << endl;
 	cout << "-----------------------------" << endl;
+	cout << " Version 2.8.1" << endl;
+	cout << "	- Changed: Added functionality to pause the program before it exits so the user can see their stats" << endl;
+	cout << "	- Changed: Minor code refactoring to increase efficiency throughout the program" << endl;
+	cout << endl;
 	cout << " Version 2.8.0" << endl;
 	cout << "	- Changed: Moved the contents of Functions.h to Main.cpp to increase program efficiency" << endl;
 	cout << "	- Changed: Moved ProgramBody() to Main.cpp so that it still worked" << endl;
 	cout << "	- Changed: Minor code refactoring to increase efficiency throughout the program" << endl;
 	cout << endl;
 	cout << " Version 2.7.1" << endl;
-	cout << "	- Bugfix: Retargeted the project to Windows 10 SDK 16299" << endl;
 	cout << "	- Changed: Changelog is now 'Release Notes'" << endl;
 	cout << "	- Changed: Added descriptions of the types of changes in Release Notes" << endl;
 	cout << "	- Changed: New wording throughout the Release Notes" << endl;
@@ -41,7 +56,6 @@ void changelog() // displays the changes made over the course of the program's d
 	cout << "	- Changed: Redesigned stats output to export to a csv file instead of a txt file" << endl;
 	cout << endl;
 	cout << " Version 2.5.3" << endl;
-	cout << "	- Bugfix: Retargeted the project to Visual Studio 2017 (Platform Toolset v141)" << endl;
 	cout << "	- Changed: Minor code refactoring to increase efficiency throughout the program" << endl;
 	cout << endl;
 	cout << " Version 2.5.2" << endl;

@@ -19,102 +19,137 @@ using std::endl;
 using std::ofstream;
 using std::ios;
 
-int menu(); // program menu
-void changelog(); // program changelog
-void addition(User*); // addition subject area
-void subtraction(User*); // subtraction subject area
-void multiplication(User*); // multiplication subject area
-void division(User*); // division subject area
+int menu();						// program menu
+void changelog();				// program changelog
+void addition(User*);			// addition subject area
+void subtraction(User*);		// subtraction subject area
+void multiplication(User*);		// multiplication subject area
+void division(User*);			// division subject area
 
-bool programBody(User* p1) // the main body of the program
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			programBody
+
+Description:	Launches the appropriate function based on the 
+				user's selection from the menu function
+
+Takes in:		Pointer to a global User object for stats tracking
+
+Returns:		Boolean variable to tell main() whether the user 
+				has chosen to exit the program:
+					- true = program will exit
+					- false = program will run for another cycle
+-----------------------------------------------------------------*/
+
+bool programBody(User* p1)		// the main body of the program
 {
 	bool done = false;
-	int choice = menu(); // prompt the user for their subject choice by running the menu function
+	int choice = menu();		// prompt the user for their subject choice by running the menu function
 
-	switch (choice) // subject selection menu
+	switch (choice)				// subject selection menu
 	{
-	case 1: // starts the addition subject area
-	{
-		addition(p1);
-	}
-
-	break;
-
-	case 2: // starts the subtraction subject area
-	{
-		subtraction(p1);
-	}
-
-	break;
-
-	case 3: // starts the multiplication subject area
-	{
-		multiplication(p1);
-	}
-
-	break;
-
-	case 4: // starts the division subject area
-	{
-		division(p1);
-	}
-
-	break;
-
-	case 5: // starts the addition subject area and then starts the subtraction subject area
-	{
-		addition(p1);
-		subtraction(p1);
-	}
-
-	break;
-
-	case 6: // starts the multiplication subject area and then starts the division subject area
-	{
-		multiplication(p1);
-		division(p1);
-	}
-
-	break;
-
-	case 7: // starts all four subject areas sequentially
-	{
-		addition(p1);
-		subtraction(p1);
-		multiplication(p1);
-		division(p1);
-	}
-
-	break;
-
-	case 8: // displays the changelog
-	{
-		changelog();
-	}
-
-	break;
-
-	case 9: // exits the program
-	{
-		cout << "Math Tutor will now exit." << endl << "Thank you for using Math Tutor." << endl << "Have a nice day." << endl;
-		cout << endl;
-		done = true;
+		case 1:					// starts the addition subject area
+		{
+			addition(p1);
+		}
 
 		break;
-	}
 
-	default: // executes if the user entered an invalid choice
-	{
-		cout << "-----------------------------" << endl;
-		cout << "Error. " << choice << " is invalid" << endl;
-		cout << "Please enter a valid choice" << endl; // prompts the user for a valid choice
-		cout << "-----------------------------" << endl;
-		cout << endl;
-	}
+		case 2:					// starts the subtraction subject area
+		{
+			subtraction(p1);
+		}
+
+		break;
+
+		case 3:					// starts the multiplication subject area
+		{
+			multiplication(p1);
+		}
+
+		break;
+
+		case 4:					// starts the division subject area
+		{
+			division(p1);
+		}
+
+		break;
+
+		case 5:					// starts the addition subject area and then starts the subtraction subject area
+		{
+			addition(p1);
+			subtraction(p1);
+		}
+
+		break;
+
+		case 6:					// starts the multiplication subject area and then starts the division subject area
+		{
+			multiplication(p1);
+			division(p1);
+		}
+
+		break;
+
+		case 7:					// starts all four subject areas sequentially
+		{
+			addition(p1);
+			subtraction(p1);
+			multiplication(p1);
+			division(p1);
+		}
+
+		break;
+
+		case 8:					// displays the changelog
+		{
+			changelog();
+		}
+
+		break;
+
+		case 9:					// exits the program
+		{
+			cout << "Math Tutor will now exit." << endl << "Thank you for using Math Tutor." << endl << "Have a nice day." << endl;
+			cout << endl;
+			done = true;
+
+			break;
+		}
+
+		default:				// executes if the user entered an invalid choice
+		{
+			cout << "-----------------------------" << endl;
+			cout << "Error. " << choice << " is invalid" << endl;
+			cout << "Please enter a valid choice" << endl;
+			cout << "-----------------------------" << endl;
+			cout << endl;
+		}
 	}
 
 	return done;
 }
+
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			main
+
+Description:	The program's main function does the following:
+					- Outputs the welcome message, 
+					- Takes in the user's name, 
+					- Initializes the User class, 
+					- Runs the main program loop (programBody())
+					- Outputs stats to the screen and a file (.csv)
+					- Cleans up
+					- Exits the program
+
+Takes in:		Nothing
+
+Returns:		Nothing
+-----------------------------------------------------------------*/
 
 int main()
 {
@@ -126,27 +161,27 @@ int main()
 	cout << "Date last modified: 11/14/2018" << endl;
 	cout << "Copyright (c) 2018 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
-	cout << "Welcome! This program will help you practice the following math concepts:" << endl; // the program's description
-	cout << "Addition, Subtraction, Multiplication, and Division." << endl << endl; // subject areas that the program supports
+	cout << "Welcome! This program will help you practice the following math concepts:" << endl;			// the program's description
+	cout << "Addition, Subtraction, Multiplication, and Division." << endl << endl;							// subject areas that the program supports
 
-	string name; // variable to store the user's name
-	cout << "What is your name? "; // ask the user for their name
-	getline(cin, name); // record the user's response
-	User* p1 = new User(name); // creates a new user object and assigns it to a pointer
-	cout << endl << "Welcome, " << p1->getName() << ". Thank you for joining us today." << endl << endl; // welcome the user by name
-	if (p1->getName() == "John Cena") // John Cena easter egg
+	string name;																							// variable to store the user's name
+	cout << "Please enter your name: ";																		// ask the user for their name
+	getline(cin, name);																						// record the user's response
+	User* p1 = new User(name);																				// creates a new user object and assigns it to a pointer
+	cout << endl << "Welcome, " << p1->getName() << ". Thank you for joining us today." << endl << endl;	// welcome the user by name
+	if (p1->getName() == "John Cena")																		// John Cena easter egg
 		cout << "*Cue epic theme music*" << endl;
 	cout << endl;
 
-	bool done = false; // allows the user to use multiple subject areas without closing the program
+	bool done = false;																						// allows the user to use multiple subject areas without closing the program
 	while (done == false)
 	{
-		done = programBody(p1); // the main body of the program
+		done = programBody(p1);																				// execute the main body of the program
 	}
 
 	// output stats to the screen and a csv file
-	ofstream stats; // open file output stream
-	stats.open("Stats.csv", ios::out | ios::ate | ios::app | ios::binary); // open csv file for writing
+	ofstream stats;																							// open file output stream
+	stats.open("Stats.csv", ios::out | ios::ate | ios::app | ios::binary);									// open csv file for writing
 
 	if (stats.fail())
 	{
@@ -157,15 +192,15 @@ int main()
 	cout << "============================" << endl;
 	cout << "     Session Statistics     " << endl;
 	cout << "============================" << endl;
-	cout << "User: " << p1->getName() << endl; // output the user's name
+	cout << "User: " << p1->getName() << endl;																// output the user's name
 	cout << "----------------------------" << endl;
-	cout << "Questions attempted:      " << p1->totalAttempted << endl; // output the total number of questions attempted
-	cout << "Correct answers:          " << p1->correctAnswers << endl; // output the number of correct answers
-	cout << "Incorrect answers:        " << p1->incorrectAnswers << endl; // output the number of incorrect answers
+	cout << "Questions attempted:      " << p1->totalAttempted << endl;										// output the total number of questions attempted
+	cout << "Correct answers:          " << p1->correctAnswers << endl;										// output the number of correct answers
+	cout << "Incorrect answers:        " << p1->incorrectAnswers << endl;									// output the number of incorrect answers
 	cout << "----------------------------" << endl;
-	cout << "Questions retried:        " << p1->totalRetried << endl; // output the total number of questions retried
-	cout << "Correct retries:          " << p1->correctRetries << endl; // output the number of correct retries
-	cout << "Incorrect retries:        " << p1->incorrectRetries << endl; // output the number of incorrect retries
+	cout << "Questions retried:        " << p1->totalRetried << endl;										// output the total number of questions retried
+	cout << "Correct retries:          " << p1->correctRetries << endl;										// output the number of correct retries
+	cout << "Incorrect retries:        " << p1->incorrectRetries << endl;									// output the number of incorrect retries
 	cout << "============================" << endl << endl;
 
 	// write stats to a new line of the csv file
@@ -174,11 +209,11 @@ int main()
 	cout << "Stats have also been saved to the last line of Stats.csv in the program's source code folder." << endl;
 	cout << endl;
 
-	stats.close(); // close the file
+	stats.close();		// close the file
 
-	system("PAUSE"); // pause the program before exiting
+	system("PAUSE");	// pause the program before exiting
 
-	delete p1; // deletes the pointer
+	delete p1;			// deletes the pointer
 
 	return 0;
 }

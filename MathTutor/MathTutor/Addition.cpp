@@ -5,7 +5,21 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void addition(User* p1) // addition subject area
+/*-----------------------------------------------------------------
+Function documentation
+-------------------------------------------------------------------
+Name:			addition
+
+Description:	Addition subject area prompts the user for a 
+				difficulty level and then outputs ten (10) 
+				addition problems of the selected difficulty
+
+Takes in:		Pointer to a global User object for stats tracking
+
+Returns:		Nothing
+-----------------------------------------------------------------*/
+
+void addition(User* p1) 
 {
 	cout << "You will now be presented with 10 addition problems." << endl;
 	cout << "If, at any time, you wish to skip the rest of the section, enter '-1' as your response." << endl;
