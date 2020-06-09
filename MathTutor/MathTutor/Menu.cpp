@@ -3,6 +3,7 @@
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
 
 /*-----------------------------------------------------------------
 Function documentation
@@ -14,14 +15,13 @@ Description:	Menu function displays the program's menu and
 
 Takes in:		Nothing
 
-Returns:		The user's action selection as an integer
+Returns:		The user's action selection as a string
 -----------------------------------------------------------------*/
 
-int menu()
+string menu()
 {
-	int choice;
-	// If the user enters an invalid integer, the switch will execute the default case, and the program will output the menu again and ask for a new choice.
-	// If the user enters a character instead of an integer, the program falls into an infinite loop
+	string choice;
+	// If the user enters an invalid choice, the program will output the menu again and ask for a new choice.
 	cout << "===============================" << endl;
 	cout << "           Main Menu           " << endl;
 	cout << "===============================" << endl;

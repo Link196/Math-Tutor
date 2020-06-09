@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.8.1
-// Date last modified: 11/14/2018
-// Copyright (c) 2018 Andrew Hutson. All rights reserved.
+// Version: 2.9.0
+// Date last modified: 06/09/2018
+// Copyright (c) 2020 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
 // For program changelog, see changelog() in Changelog.cpp
@@ -19,7 +19,7 @@ using std::endl;
 using std::ofstream;
 using std::ios;
 
-int menu();						// program menu
+string menu();					// program menu
 void changelog();				// program changelog
 void addition(User*);			// addition subject area
 void subtraction(User*);		// subtraction subject area
@@ -45,88 +45,51 @@ Returns:		Boolean variable to tell main() whether the user
 bool programBody(User* p1)		// the main body of the program
 {
 	bool done = false;
-	int choice = menu();		// prompt the user for their subject choice by running the menu function
+	string choice = menu();		// prompt the user for their subject choice by running the menu function
 
-	switch (choice)				// subject selection menu
+	// subject selection menu with if/else if sequence replacing switch statment in order to use strings as input
+	if (choice == "1")			// starts the addition subject area
+		addition(p1);
+	else if (choice == "2")		// starts the subtraction subject area
+		subtraction(p1);
+	else if (choice == "3")		// starts the multiplication subject area
+		multiplication(p1);
+	else if (choice == "4")		// starts the division subject area
+		division(p1);
+	else if (choice == "5")		// starts the addition subject area and then starts the subtraction subject area
 	{
-		case 1:					// starts the addition subject area
-		{
-			addition(p1);
-		}
-
-		break;
-
-		case 2:					// starts the subtraction subject area
-		{
-			subtraction(p1);
-		}
-
-		break;
-
-		case 3:					// starts the multiplication subject area
-		{
-			multiplication(p1);
-		}
-
-		break;
-
-		case 4:					// starts the division subject area
-		{
-			division(p1);
-		}
-
-		break;
-
-		case 5:					// starts the addition subject area and then starts the subtraction subject area
-		{
-			addition(p1);
-			subtraction(p1);
-		}
-
-		break;
-
-		case 6:					// starts the multiplication subject area and then starts the division subject area
-		{
-			multiplication(p1);
-			division(p1);
-		}
-
-		break;
-
-		case 7:					// starts all four subject areas sequentially
-		{
-			addition(p1);
-			subtraction(p1);
-			multiplication(p1);
-			division(p1);
-		}
-
-		break;
-
-		case 8:					// displays the changelog
-		{
-			changelog();
-		}
-
-		break;
-
-		case 9:					// exits the program
-		{
-			cout << "Math Tutor will now exit." << endl << "Thank you for using Math Tutor." << endl << "Have a nice day." << endl;
-			cout << endl;
-			done = true;
-
-			break;
-		}
-
-		default:				// executes if the user entered an invalid choice
-		{
-			cout << "-----------------------------" << endl;
-			cout << "Error. " << choice << " is invalid" << endl;
-			cout << "Please enter a valid choice" << endl;
-			cout << "-----------------------------" << endl;
-			cout << endl;
-		}
+		addition(p1);
+		subtraction(p1);
+	}
+	else if (choice == "6")		// starts the multiplication subject area and then starts the division subject area
+	{
+		multiplication(p1);
+		division(p1);
+	}
+	else if (choice == "7")		// starts all four subject areas sequentially
+	{
+		addition(p1);
+		subtraction(p1);
+		multiplication(p1);
+		division(p1);
+	}
+	else if (choice == "8")		// displays the changelog
+		changelog();
+	else if (choice == "9")		// exits the program
+	{
+		cout << "Math Tutor will now exit." << endl << "Thank you for using Math Tutor." << endl << "Have a nice day." << endl;
+		cout << endl;
+		done = true;
+	}
+	
+	// executes if the user entered an invalid choice
+	else
+	{
+		cout << "-----------------------------" << endl;
+		cout << "Error. '" << choice << "' is invalid" << endl;
+		cout << "Please enter a valid choice" << endl;
+		cout << "-----------------------------" << endl;
+		cout << endl;
 	}
 
 	return done;
@@ -157,9 +120,9 @@ int main()
 
 	// Welcome the user and output basic information about the program
 	cout << "Math Tutor" << endl;
-	cout << "Version 2.8.1" << endl;
-	cout << "Date last modified: 11/14/2018" << endl;
-	cout << "Copyright (c) 2018 Andrew Hutson. All rights reserved." << endl;
+	cout << "Version 2.9.0" << endl;
+	cout << "Date last modified: 06/09/2020" << endl;
+	cout << "Copyright (c) 2020 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl;			// the program's description
 	cout << "Addition, Subtraction, Multiplication, and Division." << endl << endl;							// subject areas that the program supports
