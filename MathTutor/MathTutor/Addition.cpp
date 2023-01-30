@@ -75,7 +75,7 @@ void addition(User* p1)
 
 		if (answer != -1)  // check the user's response. If they entered -1, return to the main menu
 		{
-			if (answer == x + y) // if the user's answer was correct, congradulate them and increment the correct variables
+			if (answer == x + y) // if the user's answer was correct, congratulate them and increment the correct variables
 			{
 				p1->correctAnswers++;
 				p1->totalAttempted++;
@@ -108,7 +108,7 @@ void addition(User* p1)
 					cin >> answer;
 					cout << endl;
 
-					if (answer == x + y) // if the user's answer was correct, congradulate them and increment the correct variables
+					if (answer == x + y) // if the user's answer was correct, congratulate them and increment the correct variables
 					{
 						p1->correctRetries++;
 						p1->totalRetried++;

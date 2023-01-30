@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////
 // Program Name: Math Tutor
 // Author: Andrew Hutson
-// Version: 2.9.0
-// Date last modified: 06/09/2018
-// Copyright (c) 2020 Andrew Hutson. All rights reserved.
+// Version: 3.8.1
+// Date last modified: 01/30/2023
+// Copyright (c) 2023 Andrew Hutson. All rights reserved.
 /////////////////////////////////////////////////////////
 
 // For program changelog, see changelog() in Changelog.cpp
@@ -120,9 +120,9 @@ int main()
 
 	// Welcome the user and output basic information about the program
 	cout << "Math Tutor" << endl;
-	cout << "Version 2.9.0" << endl;
-	cout << "Date last modified: 06/09/2020" << endl;
-	cout << "Copyright (c) 2020 Andrew Hutson. All rights reserved." << endl;
+	cout << "Version 3.8.1" << endl;
+	cout << "Date last modified: 01/30/2023" << endl;
+	cout << "Copyright (c) 2023 Andrew Hutson. All rights reserved." << endl;
 	cout << endl;
 	cout << "Welcome! This program will help you practice the following math concepts:" << endl;			// the program's description
 	cout << "Addition, Subtraction, Multiplication, and Division." << endl << endl;							// subject areas that the program supports
@@ -132,8 +132,6 @@ int main()
 	getline(cin, name);																						// record the user's response
 	User* p1 = new User(name);																				// creates a new user object and assigns it to a pointer
 	cout << endl << "Welcome, " << p1->getName() << ". Thank you for joining us today." << endl << endl;	// welcome the user by name
-	if (p1->getName() == "John Cena")																		// John Cena easter egg
-		cout << "*Cue epic theme music*" << endl;
 	cout << endl;
 
 	bool done = false;																						// allows the user to use multiple subject areas without closing the program

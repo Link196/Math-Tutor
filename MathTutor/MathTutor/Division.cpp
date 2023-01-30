@@ -71,7 +71,7 @@ void division(User* p1)
 
 		if (answer != -1) // check the user's response. If they entered -1, return to the main menu
 		{
-			if ((answer <= (((static_cast<double> (x)) / y) + .1)) && (answer >= (((static_cast<double> (x)) / y) - .1))) // if the user's answer was correct, congradulate them and increment the correct variables
+			if ((answer <= (((static_cast<double> (x)) / y) + .1)) && (answer >= (((static_cast<double> (x)) / y) - .1))) // if the user's answer was correct, congratulate them and increment the correct variables
 			{
 				p1->correctAnswers++;
 				p1->totalAttempted++;
@@ -104,7 +104,7 @@ void division(User* p1)
 					cin >> answer;
 					cout << endl;
 
-					if ((answer <= (((static_cast<double> (x)) / y) + .1)) && (answer >= (((static_cast<double> (x)) / y) - .1))) // if the user's answer was correct, congradulate them and increment the correct variables
+					if ((answer <= (((static_cast<double> (x)) / y) + .1)) && (answer >= (((static_cast<double> (x)) / y) - .1))) // if the user's answer was correct, congratulate them and increment the correct variables
 					{
 						p1->correctRetries++;
 						p1->totalRetried++;
